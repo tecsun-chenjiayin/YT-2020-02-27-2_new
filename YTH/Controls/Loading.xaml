@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="YTH.Functions.Loading"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YTH.Functions"
+             xmlns:controls="clr-namespace:YTH.Controls"
+             mc:Ignorable="d" 
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center"
+             IsVisibleChanged="UserControl_IsVisibleChanged"
+             Margin="0"
+             d:DesignHeight="768" d:DesignWidth="1513">
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <controls:RotateAnimation x:Name="image"></controls:RotateAnimation>
+            <TextBlock Name="tipValue" Margin="0,20,0,0" Foreground="Black" FontSize="30" TextWrapping="Wrap">提示内容</TextBlock>
+        </StackPanel>
+        <!--<Image VerticalAlignment="Bottom" Margin="60" Source="../Soruce/Images/底纹.png" Stretch="None"/>-->
+    </Grid>
+</UserControl>

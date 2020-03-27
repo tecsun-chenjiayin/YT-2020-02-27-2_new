@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="YTH.Business2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YTH"
+             xmlns:controls="clr-namespace:YTH.Controls"
+             xmlns:wpfcontrollibrary="clr-namespace:WpfControlLibrary;assembly=WpfControlLibrary"
+             mc:Ignorable="d" 
+             IsVisibleChanged="UserControl_IsVisibleChanged"
+  d:DesignHeight="1080" d:DesignWidth="1920">
+    <UserControl.Background>
+        <ImageBrush ImageSource="Soruce/Inages_ZQ/农信社.jpg"></ImageBrush>
+    </UserControl.Background>
+    <Grid>
+        <StackPanel Name="exit" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,35,0,0" VerticalAlignment="Top">
+            <wpfcontrollibrary:ScaleButton x:Name="returnToMain" Click="returnToMain_Click" Margin="0,0,100,0" Width="216" Height="88" Path="Soruce/Inages_ZQ/首页.png"/>
+            <wpfcontrollibrary:ScaleButton x:Name="back" Click="back_Click" Margin="0,0,100,0" Width="216" Height="88" Path="Soruce/Inages_ZQ/返回.png"/>
+        </StackPanel>
+        <Grid VerticalAlignment="Bottom" Height="936" Width="1920">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2.5*"/>
+                <RowDefinition Height="12.6*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="28.3*"/>
+                <ColumnDefinition Width="1.2*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Image Source="Soruce/Inages_ZQ/左边.png" Stretch="None"/>
+                <TextBlock FontSize="50" Margin="18,0,18,0" Name="title">办理领卡</TextBlock>
+                <Image Source="Soruce/Inages_ZQ/右边.png" Stretch="None"/>
+            </StackPanel>
+            <Border Grid.Row="1" Grid.Column="1" Name="bussinessArea">
+            </Border>
+            <controls:CountDownTime2 Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" x:Name="time" VerticalAlignment="Center"/>
+            <!--<Grid Grid.Row="1" Grid.Column="1" Name="businessBtns" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <StackPanel Name="exit" Orientation="Horizontal" Margin="0,0,-40,-55">
+                <controls:FButton x:Name="returnToMain" Height="116" Width="116" VerticalAlignment="Bottom"
+                                  Click="returnToMain_Click"
+                                  FIcon="Soruce/Images/退出.png">
+                    <controls:FButton.Background>
+                        <ImageBrush ImageSource="Soruce/Images/退出.png" Viewbox="0,0,0.5,1"/>
+                    </controls:FButton.Background>
+                    <controls:FButton.MouseOverBackground>
+                        <ImageBrush ImageSource="Soruce/Images/退出.png" Viewbox="0,0,0.5,1"/>
+                    </controls:FButton.MouseOverBackground>
+                    <controls:FButton.PressedBackground>
+                        <ImageBrush ImageSource="Soruce/Images/退出.png" Viewbox="0.5,0,0.5,1"/>
+                    </controls:FButton.PressedBackground>
+                </controls:FButton>
+                <controls:FButton x:Name="back" Height="127" Width="127" VerticalAlignment="Bottom"
+                                  Click="back_Click">
+                    <controls:FButton.Background>
+                        <ImageBrush ImageSource="Soruce/Images/返回.png" Viewbox="0,0,0.5,1"/>
+                    </controls:FButton.Background>
+                    <controls:FButton.MouseOverBackground>
+                        <ImageBrush ImageSource="Soruce/Images/返回.png" Viewbox="0,0,0.5,1"/>
+                    </controls:FButton.MouseOverBackground>
+                    <controls:FButton.PressedBackground>
+                        <ImageBrush ImageSource="Soruce/Images/返回.png" Viewbox="0.5,0,0.5,1"/>
+                    </controls:FButton.PressedBackground>
+                </controls:FButton>
+            </StackPanel>
+        </Grid>-->
+            <local:NodeGraph x:Name="nodeGraph" Grid.Row="1"></local:NodeGraph>
+        </Grid>
+    </Grid>
+</UserControl>

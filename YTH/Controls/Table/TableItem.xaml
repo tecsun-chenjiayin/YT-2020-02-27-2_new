@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="YTH.Controls.Table.TableItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             Height="45" d:DesignWidth="1770">
+    <Grid Name="grid" TextBlock.Foreground="Black" TextBlock.FontSize="23" Background="#E8F6FF">
+        <Border Background="Gray" Height="1" VerticalAlignment="Bottom" Name="Line" Opacity="0.3"></Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3.4*"/>
+                <ColumnDefinition Width="13.0*"/>
+                <ColumnDefinition Width="3.4*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Name="v1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" xml:space="preserve" Text="序号"/>
+            <TextBlock Name="v2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" xml:space="preserve" Text="社会保障号"/>
+            <TextBlock Name="v3" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" xml:space="preserve" Text="卡片类型"/>
+            <TextBlock Name="v4" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" xml:space="preserve" Text="补卡时间"/>
+        </Grid>
+    </Grid>
+</UserControl>

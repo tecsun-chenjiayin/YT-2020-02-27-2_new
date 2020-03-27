@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="YTH.ManagementCar.StopAddCar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YTH.ManagementCar"
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1770">
+    <Grid TextBlock.FontFamily="微软雅黑">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Image Name="ico" Source="../Soruce/Images/成功.png" Stretch="None" Margin="0,0,50,0"/>
+                <TextBlock Name="describe" FontSize="60"  FontWeight="Bold" VerticalAlignment="Center" >加卡完成</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,60,0,0" TextBlock.FontSize="40">
+                <Grid>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="5" Foreground="#737373" HorizontalAlignment="Right">本次成功加卡：</TextBlock>
+                        <TextBlock Margin="5" Foreground="#737373" HorizontalAlignment="Right">本次加卡失败：</TextBlock>
+                        <TextBlock Margin="5" Foreground="#737373" HorizontalAlignment="Right">加入预制卡：</TextBlock>
+                        <TextBlock Margin="5" Foreground="#737373" HorizontalAlignment="Right">加入社保卡：</TextBlock>
+                        <TextBlock Margin="5" Foreground="#737373" HorizontalAlignment="Right">加入借记卡：</TextBlock>
+                        <TextBlock Margin="5" Foreground="#737373" HorizontalAlignment="Right">加入信用卡：</TextBlock>
+                    </StackPanel>
+                </Grid>
+                <Grid>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Name="success" Margin="5" Foreground="#009E96" HorizontalAlignment="Left">256张</TextBlock>
+                        <TextBlock Name="failed" Margin="5" Foreground="#FA4242" HorizontalAlignment="Left">44张</TextBlock>
+                        <TextBlock Name="yzk" Margin="5" HorizontalAlignment="Left">50张</TextBlock>
+                        <TextBlock Name="sbk" Margin="5" HorizontalAlignment="Left">50张</TextBlock>
+                        <TextBlock Name="jjk" Margin="5" HorizontalAlignment="Left">50张</TextBlock>
+                        <TextBlock Name="xyk" Margin="5" HorizontalAlignment="Left">50张</TextBlock>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

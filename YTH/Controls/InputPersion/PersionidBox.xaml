@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="YTH.Controls.InputPersion.PersionidTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YTH.Controls.InputPersion"
+             mc:Ignorable="d" 
+             PreviewMouseDown="UserControl_PreviewMouseDown"
+             Height="70" Width="380">
+    <Grid Background="#EEEEEE" >
+        <TextBlock Name="persionID" FontSize="30" Margin="10,0,0,0" VerticalAlignment="Center" >441785412369874154</TextBlock>   
+    </Grid>
+</UserControl>

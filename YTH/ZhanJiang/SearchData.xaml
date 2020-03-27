@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="YTH.ZhanJiang.SearchData"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YTH.ZhanJiang"
+             mc:Ignorable="d" 
+             d:DesignHeight="704" d:DesignWidth="1513">
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Name="pic" Width="214.8" Height="264.6" Margin="0,0,100,0"></Image>
+            <StackPanel Name="sp" Orientation="Vertical" TextBlock.FontSize="40">
+                <TextBlock>姓　　名：name</TextBlock>
+                <TextBlock>性　　别：sex</TextBlock>
+                <TextBlock>民　　族：nation</TextBlock>
+                <TextBlock>出生日期：birthday</TextBlock>
+                <TextBlock>身份证号：shbzh</TextBlock>
+                <TextBlock>社保卡号：sbkh</TextBlock>
+                <TextBlock>户口性质：registtype</TextBlock>
+                <TextBlock>电　　话：telno</TextBlock>
+                <TextBlock>手　　机：mobile</TextBlock>
+                <TextBlock>通讯地址：mailaddr</TextBlock>
+                <TextBlock>邮　　编：zipcode</TextBlock>
+                <TextBlock>电子邮箱：email</TextBlock>
+                <TextBlock>单位名称：dwmc</TextBlock>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

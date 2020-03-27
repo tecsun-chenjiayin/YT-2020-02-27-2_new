@@ -1,0 +1,19 @@
+﻿<Window x:Class="YTH.Controls.IsWorking"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YTH.Controls"
+        mc:Ignorable="d"
+Left="0"
+        Top="0"
+        AllowsTransparency="True"
+        Title="Window1" Height="1080" Width="1920" WindowStyle="None" Background="Transparent">
+    <Grid>
+        <Border Background="Black" Opacity="0.5"></Border>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <local:RotateAnimation x:Name="image"></local:RotateAnimation>
+            <TextBlock Margin="0,60,0,0" FontSize="45" FontFamily="微软雅黑" Foreground="White">终端正在工作中，办理其他业务请稍候... ...</TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

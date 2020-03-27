@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="YTH.Controls.StatisitcsTable"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:YTH.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="587" d:DesignWidth="1750">
+    <UserControl.Resources>
+        <ImageBrush x:Key="SumBrushBackground"
+                    ViewportUnits="RelativeToBoundingBox" Viewbox="0,0,0.5,1"
+                    ImageSource="../../Soruce/Images/按钮.png" >
+        </ImageBrush>
+        <ImageBrush x:Key="SumBrushPressedBackground"
+                    ViewportUnits="RelativeToBoundingBox" Viewbox="0.5,0,0.5,1"
+                    ImageSource="../../Soruce/Images/按钮.png" >
+        </ImageBrush>
+        <Style TargetType="{x:Type controls:FButton}" x:Key="btnStyle">
+            <Setter Property="Background" Value="{StaticResource SumBrushBackground}" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="MouseOverBackground" Value="{StaticResource SumBrushBackground}" />
+            <Setter Property="MouseOverForeground" Value="Black" />
+            <Setter Property="PressedBackground" Value="{StaticResource SumBrushPressedBackground}" />
+            <Setter Property="PressedForeground" Value="White" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Width" Value="173" />
+            <Setter Property="Height" Value="58" />
+            <Setter Property="FontSize" Value="32" />
+            <Setter Property="AllowsAnimation" Value="False" />
+            <Setter Property="Margin" Value="0,0,90,0"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="1.8*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Name="itemList" Orientation="Vertical">
+            
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <controls:FButton Style="{StaticResource btnStyle}" x:Name="firstPage" Click="firstPage_Click">首页</controls:FButton>
+                <controls:FButton Style="{StaticResource btnStyle}" x:Name="lastPate" Click="lastPate_Click">上一页</controls:FButton>
+                <controls:FButton Style="{StaticResource btnStyle}" x:Name="nextPage" Click="nextPage_Click">下一页</controls:FButton>
+                <controls:FButton Style="{StaticResource btnStyle}" x:Name="endPage" Click="endPage_Click">尾页</controls:FButton>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

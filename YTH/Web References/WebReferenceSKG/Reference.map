@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="file:///F:/湛江农信/湛江农信第一版/YT-2020-02-27-2_new/YTH/bin/x86/Debug/jszkService.wsdl" filename="JszkServiceImplService.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

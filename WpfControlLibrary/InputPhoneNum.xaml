@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="WpfControlLibrary.InputPhoneNum"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfControlLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="699" d:DesignWidth="761">
+    <UserControl.Resources>
+        <Style x:Key="tx" TargetType="{x:Type local:TXButton}">
+            <Setter Property="Background" Value="#EEEEEE"/>
+            <Setter Property="MouseOverBKGround" Value="#EEEEEE"/>
+            <Setter Property="MousePressBKGround" Value="#CCE8F6"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Width" Value="218" />
+            <Setter Property="Height" Value="104" />
+            <Setter Property="FontSize" Value="35" />
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Tag" Value="Num"/>
+            <Setter Property="CornerRadius" Value="5" />
+        </Style>
+        <Style x:Key="closetx" TargetType="{x:Type local:TXButton}" BasedOn="{StaticResource tx}">
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Tag" Value="close"/>
+            <Setter Property="Background" Value="#FF4242"/>
+            <Setter Property="MouseOverBKGround" Value="#FF4242"/>
+            <Setter Property="MousePressBKGround" Value="#D93737"/>
+        </Style>
+        <Style x:Key="oktx" TargetType="{x:Type local:TXButton}" BasedOn="{StaticResource closetx}">
+            <Setter Property="Tag" Value="ok"/>
+            <Setter Property="Background" Value="#008ED3"/>
+            <Setter Property="MouseOverBKGround" Value="#008ED3"/>
+            <Setter Property="MousePressBKGround" Value="#CCE8F6"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid RenderTransformOrigin="0.5,0.5"  
+            Width="761" Height="699" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Border Background="White" CornerRadius="14">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" FontSize="35" FontWeight="Bold">手机号:</TextBlock>
+                    <local:InputClear MaxLength="11" x:Name="phone" Width="540" Margin="30,0,0,0" TipText="请输入" FontSize="40" TipFontSize="35" />
+                </StackPanel>
+                <TextBlock Name="tip" HorizontalAlignment="Center" FontSize="35" Foreground="Red" Height="40" VerticalAlignment="Center">提示：</TextBlock>
+                <WrapPanel HorizontalAlignment="Center" local:TXButton.Click="WrapPanel_Click">
+                    <local:TXButton Style="{StaticResource tx}" Content="1" />
+                    <local:TXButton Style="{StaticResource tx}" Content="2" />
+                    <local:TXButton Style="{StaticResource tx}" Content="3" />
+                    <local:TXButton Style="{StaticResource tx}" Content="4" />
+                    <local:TXButton Style="{StaticResource tx}" Content="5" />
+                    <local:TXButton Style="{StaticResource tx}" Content="6" />
+                    <local:TXButton Style="{StaticResource tx}" Content="7" />
+                    <local:TXButton Style="{StaticResource tx}" Content="8" />
+                    <local:TXButton Style="{StaticResource tx}" Content="9" />
+                    <local:TXButton Style="{StaticResource closetx}" Content="关闭" />
+                    <local:TXButton Style="{StaticResource tx}" Content="0" />
+                    <local:TXButton Style="{StaticResource oktx}" Content="确定" />
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+        <Grid.RenderTransform>
+            <ScaleTransform ScaleX="1" ScaleY="1"/>
+        </Grid.RenderTransform>
+    </Grid>
+</UserControl>

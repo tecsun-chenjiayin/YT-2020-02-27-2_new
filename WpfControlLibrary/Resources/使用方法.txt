@@ -1,0 +1,31 @@
+﻿在目标项目的App.xaml中设置
+<Application x:Class="WpfControlLibraryTest.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfControlLibraryTest"
+             xmlns:wpfcontrollibrary="clr-namespace:WpfControlLibrary;assembly=WpfControlLibrary"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary x:Name="rd">
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/动态库项目名;Component/文件路径" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+
+例如：
+<Application x:Class="WpfControlLibraryTest.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfControlLibraryTest"
+             xmlns:wpfcontrollibrary="clr-namespace:WpfControlLibrary;assembly=WpfControlLibrary"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary x:Name="rd">
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/WpfControlLibrary;Component/Resources/ButtonDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

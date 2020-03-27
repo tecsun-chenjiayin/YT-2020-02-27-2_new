@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="YTH.ZhanJiang.SelectCardStyle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YTH.ZhanJiang"
+             xmlns:controls="clr-namespace:YTH.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="704" d:DesignWidth="1536">
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" FontSize="45">请选择您的参保身份</TextBlock>
+            <controls:TXButton x:Name="styl2" Click="styl2_Click" CornerRadius="5" BorderThickness="0" Width="400" Height="99" MouseOverBKGround="#1673B9" MousePressBKGround="#FF135481" Background="#1673B9" Foreground="White" FontSize="50" Margin="0,40,0,20">城镇居民</controls:TXButton>
+            <controls:TXButton x:Name="styl3" Click="styl3_Click" CornerRadius="5" BorderThickness="0" Width="400" Height="99" MouseOverBKGround="#1673B9" MousePressBKGround="#FF135481" Background="#1673B9" Foreground="White" FontSize="50" Margin="0,20">农村居民</controls:TXButton>
+            <controls:TXButton x:Name="styl1" Click="styl1_Click" CornerRadius="5" BorderThickness="0" Width="400" Height="99" MouseOverBKGround="#1673B9" MousePressBKGround="#FF135481" Background="#1673B9" Foreground="White" FontSize="50" Margin="0,20">城镇职工</controls:TXButton>
+        </StackPanel>
+    </Grid>
+</UserControl>

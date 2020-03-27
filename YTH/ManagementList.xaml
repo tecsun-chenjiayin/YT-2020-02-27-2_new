@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="YTH.ManagementList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YTH"
+             xmlns:myctl="clr-namespace:WpfControlLibrary;assembly=WpfControlLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid>
+        <Border x:Name="mainArea">
+            <Grid Name="mainGrid" Visibility="Visible" Height="1080" Width="1920" TextBlock.FontFamily="黑体">
+                <Grid.Background>
+                    <ImageBrush ImageSource="Soruce/Inages_ZQ/农信社.jpg"></ImageBrush>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,35,0,0">
+                        <TextBlock Name="mainTitle" FontSize="50" Margin="0,0,140,0" VerticalAlignment="Center">管理员功能</TextBlock>
+                        <myctl:ScaleButton x:Name="exit" Click="Exit_Click" Margin="0,0,140,0" Width="216" Height="88" Path="Soruce/Inages_ZQ/退出.png"/>
+                    </StackPanel>
+                </Grid>
+                <Border Grid.Row="1">
+                    <myctl:ScaleButton x:Name="addCar" Click="AddCar_Click" Margin="0,0,140,0" Width="533" Height="423" Path="Soruce/Inages_ZQ/批量加卡.png"/>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

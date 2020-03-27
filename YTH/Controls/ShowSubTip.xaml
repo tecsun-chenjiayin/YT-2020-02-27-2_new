@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="YTH.Controls.ShowSubTip"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YTH.Controls"
+             mc:Ignorable="d" 
+              d:DesignHeight="768" d:DesignWidth="1513">
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="0,0,0,150">
+            <Image Name="tipStyle" Source="../Soruce/Images/设备故障.png" Stretch="None"/>
+            <TextBlock Name="error" Margin="0,20,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" TextWrapping="Wrap">错误信息：错误信息</TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

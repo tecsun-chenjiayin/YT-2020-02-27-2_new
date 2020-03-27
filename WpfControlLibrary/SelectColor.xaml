@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="AnimationTest1.SelectColor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AnimationTest1"
+             mc:Ignorable="d" 
+             d:DesignHeight="155" d:DesignWidth="420">
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid PreviewMouseDown="Grid_PreviewMouseDown" PreviewMouseUp="Grid_PreviewMouseUp" PreviewMouseMove="Grid_PreviewMouseMove">
+                <Grid.Clip>
+                    <RectangleGeometry Rect="0,0,310,155">
+                    </RectangleGeometry>
+                </Grid.Clip>
+                <Border  Width="310" Height="155">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <LinearGradientBrush.RelativeTransform>
+                                <TransformGroup>
+                                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                    <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </LinearGradientBrush.RelativeTransform>
+                            <GradientStop Color="White" Offset="1"/>
+                            <GradientStop x:Name="gs" Color="#FFFF0101"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                <!--PreviewMouseDown="border_select1_PreviewMouseDown"
+                        PreviewMouseUp="border_select1_PreviewMouseUp"
+                        PreviewMouseMove="border_select1_PreviewMouseMove"-->
+                <Border Name="border_select1"
+
+                        Width="310" Height="155">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#00000000" Offset="0"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Path Name="select1" Data="M 0,3 A 3,3 10 1,0 -0.99,3 Z">
+                        <!--
+                        r = a
+                        select point = x,y
+                        set point1 = x,a + y
+                        set point2 = x-0.01,a + y
+                        -->
+                        <Path.Stroke>
+                            <RadialGradientBrush>
+                                <GradientStop Color="Red" Offset="0"/>
+                                <GradientStop Color="#FFBD4747" Offset="1"/>
+                                <GradientStop Color="#FFFFF300" Offset="0.228"/>
+                                <GradientStop Color="#FF00FF23" Offset="0.715"/>
+                                <GradientStop Color="#FF0051FF" Offset="0.788"/>
+                                <GradientStop Color="#FFCD24E8" Offset="0.908"/>
+                            </RadialGradientBrush>
+                        </Path.Stroke>
+                    </Path>
+                </Border>
+            </Grid>
+            <Border Width="20" Height="155" Margin="2,0,0,0"
+                      PreviewMouseDown="grid2_PreviewMouseDown"
+                      PreviewMouseUp="grid2_PreviewMouseUp"
+                      PreviewMouseMove="grid2_PreviewMouseMove"
+                    >
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Red" Offset="0"/>
+                        <GradientStop Color="Yellow" Offset="0.1666"/>
+                        <GradientStop Color="Lime" Offset="0.3232"/>
+                        <GradientStop Color="#FF00FFEB" Offset="0.4998"/>
+                        <GradientStop Color="Blue" Offset="0.6664"/>
+                        <GradientStop Color="Magenta" Offset="0.833"/>
+                        <GradientStop Color="Red" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid Name="grid2"
+
+                    >
+                    <Grid.Clip>
+                        <RectangleGeometry Rect="0,0,20,155">
+                        </RectangleGeometry>
+                    </Grid.Clip>
+                    <Path Name="select21" Fill="Black" Data="M0,-5 L0,5 L5,0 Z"/>
+                    <Path Name="select22" Fill="Black" Data="M20,-5 L20,5 L15,0 Z" HorizontalAlignment="Right"/>
+                    <!--
+                        select = y
+                        （0，y-5），（0，y+5），（5，y）
+                        （20，y-5），（20，y+5），（15，y）
+                        -->
+                </Grid>
+            </Border>
+            <StackPanel Orientation="Vertical" TextBlock.FontSize="15" TextBlock.Foreground="Black" TextBlock.FontFamily="隶书">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8" HorizontalAlignment="Right">
+                    <TextBlock Margin="5,0,5,0" VerticalAlignment="Center" Text="R"/>
+                    <TextBox Width="70" Height="20"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8" HorizontalAlignment="Right">
+                    <TextBlock Margin="5,0,5,0" VerticalAlignment="Center" Text="G"/>
+                    <TextBox Width="70" Height="20"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8" HorizontalAlignment="Right">
+                    <TextBlock Margin="5,0,5,0" VerticalAlignment="Center" Text="B"/>
+                    <TextBox Width="70" Height="20"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8" HorizontalAlignment="Right">
+                    <TextBlock Margin="5,0,5,0" VerticalAlignment="Center" Text="A"/>
+                    <TextBox Width="70" Height="20"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8" HorizontalAlignment="Right">
+                    <Border Name="see" Width="70" Height="15" Background="Red"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0" HorizontalAlignment="Right">
+                    <TextBox Name="seeText" Width="70" Height="20" FontSize="14">#FFFFFFFF</TextBox>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

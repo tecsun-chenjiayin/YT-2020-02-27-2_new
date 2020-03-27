@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="YTH.Controls.SelectTimeCtls.Month"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YTH.Controls.SelectTimeCtls"
+             mc:Ignorable="d" 
+             d:DesignHeight="622" d:DesignWidth="729">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Label}" x:Key="btn">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="Margin" Value="26.5,50,0,0"/>
+            <Setter Property="FontSize" Value="37"/>
+            <Setter Property="Tag" Value="Label"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+    <WrapPanel Name="wrap" VerticalAlignment="Top" PreviewMouseDown="WrapPanel_PreviewMouseDown"
+              >
+        <Label Style="{StaticResource btn}" Content="1月"/>
+        <Label Style="{StaticResource btn}" Content="2月"/>
+        <Label Style="{StaticResource btn}" Content="3月"/>
+        <Label Style="{StaticResource btn}" Content="4月"/>
+        <Label Style="{StaticResource btn}" Content="5月"/>
+        <Label Style="{StaticResource btn}" Content="6月"/>
+        <Label Style="{StaticResource btn}" Content="7月"/>
+        <Label Style="{StaticResource btn}" Content="8月"/>
+        <Label Style="{StaticResource btn}" Content="9月"/>
+        <Label Style="{StaticResource btn}" Content="10月"/>
+        <Label Style="{StaticResource btn}" Content="11月"/>
+        <Label Style="{StaticResource btn}" Content="12月"/>
+    </WrapPanel>
+</UserControl>

@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="YTH.GetCar.I_GetSSCar_old"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YTH.GetCar"
+             mc:Ignorable="d" 
+             xmlns:gif="http://wpfanimatedgif.codeplex.com"
+              d:DesignHeight="768" d:DesignWidth="1513">
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <!--<TextBlock Foreground="Black" FontSize="35" HorizontalAlignment="Center" Margin="0,0,0,30">请取走您的社保卡</TextBlock>-->
+            <!--<Image Source="../Soruce/Images/取社保卡.png" Stretch="None"></Image>-->
+            <Image Width="558" Height="583" gif:ImageBehavior.AnimatedSource="../Soruce/Inages_ZQ/拔出社保卡.gif" gif:ImageBehavior.RepeatBehavior="100x" Stretch="Uniform"  />
+            <TextBlock HorizontalAlignment="Center" FontSize="40" Foreground="Red">提示：取卡后须到智慧柜员机进行医保和金融账户激活</TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

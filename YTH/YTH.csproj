@@ -1,0 +1,1097 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C8271FC-2B1A-4ADA-A691-ECD48C6A05D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YTH</RootNamespace>
+    <AssemblyName>YTH</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tecsun.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevPrinter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\DevPrinter.dll</HintPath>
+    </Reference>
+    <Reference Include="Magick.NET-Q16-AnyCPU, Version=7.0.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\Magick.NET-Q16-AnyCPU.7.0.5.502\lib\net40-client\Magick.NET-Q16-AnyCPU.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.86.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IO, Version=2.6.8.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\net40\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime, Version=2.6.8.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks, Version=2.6.8.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.8\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="tools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\tools.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WpfAnimatedGif, Version=1.4.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+    <Reference Include="ZMotifGraphics, Version=1.7.4100.0, Culture=neutral, PublicKeyToken=e38255d558fcaa39, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\ZMotifGraphics.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Controls_Process\B_ReadIDCar.xaml.cs">
+      <DependentUpon>B_ReadIDCar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls_Process\B_ReadSSCard.xaml.cs">
+      <DependentUpon>B_ReadSSCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls_Process\CheckPersionData.xaml.cs">
+      <DependentUpon>CheckPersionData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls_Process\InputPersionMsg.xaml.cs">
+      <DependentUpon>InputPersionMsg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls_Process\I_GetSSCar_old.xaml.cs" />
+    <Compile Include="Controls_Process\SelectCard.xaml.cs">
+      <DependentUpon>SelectCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls_Process\WeiWang.cs" />
+    <Compile Include="Business2.xaml.cs">
+      <DependentUpon>Business2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CheckSelf.cs" />
+    <Compile Include="Controls\CheckPassword.xaml.cs">
+      <DependentUpon>CheckPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CheckPassword2.xaml.cs">
+      <DependentUpon>CheckPassword2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CheckPassword3.xaml.cs">
+      <DependentUpon>CheckPassword3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ColorButton.xaml.cs">
+      <DependentUpon>ColorButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CountDownTime.xaml.cs">
+      <DependentUpon>CountDownTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CountDownTime2.xaml.cs">
+      <DependentUpon>CountDownTime2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InputPersion\InputPersionidWinxaml.xaml.cs">
+      <DependentUpon>InputPersionidWinxaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InputPersion\PersionidBox.xaml.cs">
+      <DependentUpon>PersionidBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InputPhoneNum.xaml.cs">
+      <DependentUpon>InputPhoneNum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IsWorking.xaml.cs">
+      <DependentUpon>IsWorking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MPassword.xaml.cs">
+      <DependentUpon>MPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RotateAnimation.xaml.cs">
+      <DependentUpon>RotateAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectTimeCtls\Days.xaml.cs">
+      <DependentUpon>Days.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectTimeCtls\Month.xaml.cs">
+      <DependentUpon>Month.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectTimeCtls\SelectTimeBox.xaml.cs">
+      <DependentUpon>SelectTimeBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectTimeCtls\SelectTimeWin.xaml.cs">
+      <DependentUpon>SelectTimeWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectTimeCtls\Years.xaml.cs">
+      <DependentUpon>Years.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShowError1.xaml.cs">
+      <DependentUpon>ShowError1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShowSubTip.xaml.cs">
+      <DependentUpon>ShowSubTip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Table2\MyCheckBox.xaml.cs">
+      <DependentUpon>MyCheckBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Table2\SelectTable.xaml.cs">
+      <DependentUpon>SelectTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Table2\SelectTableItem.xaml.cs">
+      <DependentUpon>SelectTableItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Table\StatisitcsTable.xaml.cs">
+      <DependentUpon>StatisitcsTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Table\TableItem.xaml.cs">
+      <DependentUpon>TableItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TipWinB1.xaml.cs">
+      <DependentUpon>TipWinB1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TXButton.xaml.cs">
+      <DependentUpon>TXButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\AnalyzeJson.cs" />
+    <Compile Include="Functions\AnalyzeXML.cs" />
+    <Compile Include="Functions\Bitmaps.cs" />
+    <Compile Include="Functions\Image_.cs" />
+    <Compile Include="Functions\IniFile.cs" />
+    <Compile Include="Functions\KeyPad.cs" />
+    <Compile Include="Functions\KeyPad2.cs" />
+    <Compile Include="Controls\Loading.xaml.cs">
+      <DependentUpon>Loading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\MakeJson.cs" />
+    <Compile Include="Functions\MSDLL\MS.cs" />
+    <Compile Include="Functions\MSDLL\MS2.cs" />
+    <Compile Include="Functions\Post.cs" />
+    <Compile Include="Functions\Print.cs" />
+    <Compile Include="Functions\Network.cs" />
+    <Compile Include="Functions\ReadCarAndSQCode\ReadIDCar.cs" />
+    <Compile Include="Functions\ReadCarAndSQCode\ReadSSCar.cs" />
+    <Compile Include="Functions\ReadCarAndSQCode\ScanQRCode.cs" />
+    <Compile Include="Functions\Status.cs" />
+    <Compile Include="Functions\TaskMore.cs" />
+    <Compile Include="Functions\ThreadHandle\TH.cs" />
+    <Compile Include="Functions\ThreadHandle\ThreadProperty.cs" />
+    <Compile Include="Controls_Process\A_ReadIDCar.xaml.cs">
+      <DependentUpon>A_ReadIDCar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TipWin.xaml.cs">
+      <DependentUpon>TipWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Initialise.xaml.cs">
+      <DependentUpon>Initialise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LingKa\NetStepUI.xaml.cs">
+      <DependentUpon>NetStepUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectCars.xaml.cs">
+      <DependentUpon>SelectCars.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainList.xaml.cs">
+      <DependentUpon>MainList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\Common.cs" />
+    <Compile Include="Functions\MD5.cs" />
+    <Compile Include="Functions\Network3.cs" />
+    <Compile Include="ManagementCar\StopAddCar.xaml.cs">
+      <DependentUpon>StopAddCar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementList.xaml.cs">
+      <DependentUpon>ManagementList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShowTip.xaml.cs">
+      <DependentUpon>ShowTip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TXButton2.xaml.cs">
+      <DependentUpon>TXButton2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReferenceSKG\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="ZhanJiang\AddCard.xaml.cs">
+      <DependentUpon>AddCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhanJiang\Autograph.xaml.cs">
+      <DependentUpon>Autograph.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhanJiang\buka.cs" />
+    <Compile Include="ZhanJiang\ChangePsw.xaml.cs">
+      <DependentUpon>ChangePsw.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhanJiang\huanka.cs" />
+    <Compile Include="ZhanJiang\LinagKa.cs" />
+    <Compile Include="ZhanJiang\MakeCardProcess.xaml.cs">
+      <DependentUpon>MakeCardProcess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhanJiang\MakeCardProcess2.xaml.cs">
+      <DependentUpon>MakeCardProcess2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhanJiang\newCard.cs" />
+    <Compile Include="ZhanJiang\SearchData.xaml.cs">
+      <DependentUpon>SearchData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhanJiang\SearchList.xaml.cs">
+      <DependentUpon>SearchList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhanJiang\SelectCardStyle.xaml.cs">
+      <DependentUpon>SelectCardStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZhanJiang\Sqlite.cs" />
+    <Page Include="Controls_Process\B_ReadIDCar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls_Process\B_ReadSSCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls_Process\CheckPersionData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls_Process\InputPersionMsg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls_Process\I_GetSSCar_old.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls_Process\SelectCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Business.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Business2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CheckPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CheckPassword2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CheckPassword3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ColorButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CountDownTime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CountDownTime2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DateTime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\InputPersion\InputPersionidWinxaml.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\InputPersion\PersionidBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\InputPhoneNum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\IsWorking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ListBoxTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\RotateAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SelectTimeCtls\Days.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SelectTimeCtls\Month.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SelectTimeCtls\SelectTimeBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SelectTimeCtls\SelectTimeWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SelectTimeCtls\Years.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ShowError1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ShowSubTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Table2\MyCheckBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Table2\SelectTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Table2\SelectTableItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Table\StatisitcsTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Table\TableItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TipWinB1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TXButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Loading.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\VerticalScrollBarTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Initialise.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LingKa\NetStepUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SelectCars.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business.xaml.cs">
+      <DependentUpon>Business.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AnimatedGIFControl.cs" />
+    <Compile Include="Controls\DateTime.xaml.cs">
+      <DependentUpon>DateTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FButton.cs" />
+    <Compile Include="Controls\ImageButton.cs" />
+    <Compile Include="Functions\BackExit.cs" />
+    <Compile Include="Functions\CommonData.cs" />
+    <Compile Include="Functions\Config.cs" />
+    <Compile Include="Functions\ThreadHandle\ForeverThread.cs" />
+    <Compile Include="Functions\Log.cs" />
+    <Compile Include="Functions\MP3.cs" />
+    <Compile Include="Functions\StatusData.cs" />
+    <Compile Include="Functions\TimeTag.cs" />
+    <Compile Include="Functions\TXML.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ManagementCar\StopAddCar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManagementList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NodeGraph.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls_Process\A_ReadIDCar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ShowTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TipWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TXButton2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhanJiang\AddCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhanJiang\Autograph.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ZhanJiang\ChangePsw.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhanJiang\MakeCardProcess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhanJiang\MakeCardProcess2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhanJiang\SearchData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhanJiang\SearchList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ZhanJiang\SelectCardStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Functions\Network\Parameter.cs" />
+    <Compile Include="Functions\Network\Common.cs" />
+    <Compile Include="Functions\Network\MJson.cs" />
+    <Compile Include="Functions\Network\NetData.cs" />
+    <Compile Include="Functions\Network\Network.cs" />
+    <Compile Include="Functions\Network\Network2.cs" />
+    <Compile Include="NodeGraph.xaml.cs">
+      <DependentUpon>NodeGraph.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReference1\CardService.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WebReferenceSKG\JszkServiceImplService.wsdl" />
+    <None Include="Web References\WebReferenceSKG\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReference\CardService.wsdl" />
+    <None Include="Web References\WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Soruce\Images\2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\blueJT.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\bluePoint.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\greenPoint.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\handleErrorCar.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\l蓝色.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\h红色.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\redJT.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\redPoint.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\出卡失败.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\单张加卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\取卡.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Soruce\Inages_ZQ\农信社.jpg" />
+    <Resource Include="Soruce\Images\读取身份证.gif" />
+    <Content Include="Soruce\Inages_ZQ\插入社保卡2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\暂无信息.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\未标题-9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Soruce\Inages_ZQ\社保卡领卡.png" />
+    <Resource Include="Soruce\Inages_ZQ\社保卡密码修改.png" />
+    <Content Include="Soruce\Inages_ZQ\设备故障.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\失败.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\完成点.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\官方微信.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\底纹.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\成功.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\批量加卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\掌上银行.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\插卡.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\暂无.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\白色加载.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\设备故障.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\返回 %282%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\进行点.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\领卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\默认点.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\成品卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\预制卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\clear.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\加卡点击.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\加卡默认.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\金融卡制卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\00.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\001.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\002.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\003.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\004.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\005.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\006.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\007.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\008.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\009.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\00。1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\关闭.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\加卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\单张加卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\右边.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\左边.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\异常卡处理.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\成功.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\批量加卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\拔出社保卡.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\提示动画背景框.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\插入社保卡.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\更多.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\横灰.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\横蓝.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\灰色.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\灰色线.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\社保卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\背景.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\蓝色.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\蓝色线.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\读取身份证.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\身份证.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\返回.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\退出.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\退卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Inages_ZQ\首页.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Soruce\Images\01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\03.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\04.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\05.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\06.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\tecsun.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\主页.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\代理补卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\凭条.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\删除.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\办理换卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\办理补卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\办理领卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\加卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\加载.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\取社保卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\圆点.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\宽框.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\扫二维码.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\按钮.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\数字按钮.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\时间框.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\本人补卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\标题.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\框.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\清卡.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\清除.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\灯拷贝.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\白色按钮.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\确定.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\箭头线.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\红色按钮.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\统计.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\背景.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\蓝色按钮.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\读身份证.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\输入框.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\返回.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\退出.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soruce\Images\选择三角形.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="tecsun.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="F:\湛江农信\湛江农信第一版\YT-2020-02-27-2_new\YTH\bin\x86\Debug\jszkService.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReferenceSKG\</RelPath>
+      <UpdateFromURL>F:\湛江农信\湛江农信第一版\YT-2020-02-27-2_new\YTH\bin\x86\Debug\jszkService.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>YTH_WebReferenceSKG_JszkServiceImplService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://193.100.40.89:7001/gdCardService/services/CardService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference\</RelPath>
+      <UpdateFromURL>http://193.100.40.89:7001/gdCardService/services/CardService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>YTH_WebReference_CardServiceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WpfControlLibrary\WpfControlLibrary.csproj">
+      <Project>{54d64eb6-a9e4-4f0a-acd3-275edabf607a}</Project>
+      <Name>WpfControlLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="NHMakeCard">
+      <Guid>{3886C98F-8415-44DE-8350-F0016D6E16F7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+</Project>

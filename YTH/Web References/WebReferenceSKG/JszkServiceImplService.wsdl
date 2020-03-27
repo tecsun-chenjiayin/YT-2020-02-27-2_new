@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://zjzkservice.huize.cn/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="JszkServiceImplService" targetNamespace="http://zjzkservice.huize.cn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://zjzkservice.huize.cn/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getPhoto" type="tns:getPhoto" />
+      <xs:element name="getPhotoResponse" type="tns:getPhotoResponse" />
+      <xs:element name="insertData" type="tns:insertData" />
+      <xs:element name="insertDataResponse" type="tns:insertDataResponse" />
+      <xs:complexType name="getPhoto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="idNo" type="xs:string" />
+          <xs:element minOccurs="0" name="key" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPhotoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="insertData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="key" type="xs:string" />
+          <xs:element minOccurs="0" name="sfzh" type="xs:string" />
+          <xs:element minOccurs="0" name="xm" type="xs:string" />
+          <xs:element minOccurs="0" name="hzd" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="insertDataResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getPhotoResponse">
+    <wsdl:part name="parameters" element="tns:getPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertDataResponse">
+    <wsdl:part name="parameters" element="tns:insertDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPhoto">
+    <wsdl:part name="parameters" element="tns:getPhoto" />
+  </wsdl:message>
+  <wsdl:message name="insertData">
+    <wsdl:part name="parameters" element="tns:insertData" />
+  </wsdl:message>
+  <wsdl:portType name="JszkService">
+    <wsdl:operation name="getPhoto">
+      <wsdl:input name="getPhoto" message="tns:getPhoto" />
+      <wsdl:output name="getPhotoResponse" message="tns:getPhotoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="insertData">
+      <wsdl:input name="insertData" message="tns:insertData" />
+      <wsdl:output name="insertDataResponse" message="tns:insertDataResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="JszkServiceImplServiceSoapBinding" type="tns:JszkService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getPhoto">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getPhoto">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPhotoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertData">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="insertData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="insertDataResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JszkServiceImplService">
+    <wsdl:port name="JszkServiceImplPort" binding="tns:JszkServiceImplServiceSoapBinding">
+      <soap:address location="http://133.10.1.245:7002/JszkWebService/service/jszkService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

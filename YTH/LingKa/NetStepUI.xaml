@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="YTH.LingKa.NetStepUI"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YTH.LingKa"
+             xmlns:controls="clr-namespace:YTH.Controls"
+             mc:Ignorable="d" 
+              d:DesignHeight="768" d:DesignWidth="1513">
+    <Grid>
+        <TextBlock Name="t" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40">错误信息</TextBlock>
+        <controls:TXButton x:Name="ok" Click="TXButton_Click" Background="#019E97" MousePressBKGround="#019E97" MouseOverBKGround="#019E97" Foreground="White" FontSize="40" Height="90" Width="250" CornerRadius="10" VerticalAlignment="Bottom" Margin="0,0,0,100" HorizontalAlignment="Center">领取下一张</controls:TXButton>
+
+        <!--<controls:ColorButton PreviewMouseUp="ok_PreviewMouseUp" x:Name="ok" downColor1="#FF0041EE" downColor2="#FF0097F3" tText="领取下一张" tFontSize="35" tForeground="White"  VerticalAlignment="Bottom" Margin="0,0,0,100" />-->
+    </Grid>
+</UserControl>

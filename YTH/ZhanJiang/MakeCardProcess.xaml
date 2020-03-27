@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="YTH.ZhanJiang.MakeCardProcess"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YTH.ZhanJiang"
+             mc:Ignorable="d" 
+             d:DesignHeight="704" d:DesignWidth="1770">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" TextBlock.FontSize="30" Margin="0,20,0,25">
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" Text="处理时间"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Name="m1" Text="2019.09.23"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Name="m2" Text="2019.09.23"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Name="m3" Text="2019.09.23"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Name="m4" Text="2019.09.23"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Name="m5" Text="2019.09.23"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Name="m6" Text="2019.09.23"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Name="m7" Text="2019.09.23"/>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" TextBlock.FontSize="35" TextBlock.Foreground="White">
+                <Border Width="225"/>
+                <Image Name="p1" Source="../Soruce/Inages_ZQ/蓝色.png" Stretch="None"></Image>
+                <Image Name="L1" Source="../Soruce/Inages_ZQ/横蓝.png" Stretch="None" Width="150" Margin="20,0,20,0"></Image>
+                <Image Name="p2" Source="../Soruce/Inages_ZQ/蓝色.png" Stretch="None"></Image>
+                <Image Name="L2" Source="../Soruce/Inages_ZQ/横灰.png" Stretch="None" Width="150" Margin="20,0,20,0"></Image>
+                <Image Name="p3" Source="../Soruce/Inages_ZQ/灰色.png" Stretch="None"></Image>
+                <Image Name="L3" Source="../Soruce/Inages_ZQ/横灰.png" Stretch="None" Width="150" Margin="20,0,20,0"></Image>
+                <Image Name="p4" Source="../Soruce/Inages_ZQ/灰色.png" Stretch="None"></Image>
+                <Image Name="L4" Source="../Soruce/Inages_ZQ/横灰.png" Stretch="None" Width="150" Margin="20,0,20,0"></Image>
+                <Image Name="p5" Source="../Soruce/Inages_ZQ/灰色.png" Stretch="None"></Image>
+                <Image Name="L5" Source="../Soruce/Inages_ZQ/横灰.png" Stretch="None" Width="150" Margin="20,0,20,0"></Image>
+                <Image Name="p6" Source="../Soruce/Inages_ZQ/灰色.png" Stretch="None"></Image>
+                <Image Name="L6" Source="../Soruce/Inages_ZQ/横灰.png" Stretch="None" Width="150" Margin="20,0,20,0"></Image>
+                <Image Name="p7" Source="../Soruce/Inages_ZQ/灰色.png" Stretch="None"></Image>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" TextBlock.FontWeight="Bold" TextBlock.FontSize="40" Margin="0,25,0,0">
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" Text="业务环节"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Foreground="#FF1294FF" Name="t1" Text="未申请"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Name="t2" Text="已申请"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Name="t3" Text="预开户"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Name="t4" Text="制卡中"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Name="t5" Text="制卡完成"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Name="t6" Text="已领取"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Name="t7" Text="银行激活"/>
+                </Border>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" TextBlock.FontSize="28" Margin="0,20,0,0">
+                <Border Width="225"/>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Margin="20,0,20,0" Name="T1" TextWrapping="Wrap" Text="您的社保卡申请信息已提交省卡管系统，并成功受理"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Margin="20,0,20,0" Name="T2" TextWrapping="Wrap" Text="您的社保卡已完成金融账户的开户阶段"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Margin="20,0,20,0" Name="T3" TextWrapping="Wrap" Text="您的社保卡已完成卡片制作"/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Margin="20,0,20,0" Name="T4" TextWrapping="Wrap" Text="您的社保卡已寄出到市卡管理机构"/>
+                </Border>
+                <Border Width="225">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock HorizontalAlignment="Center" Margin="20,0,20,0" Name="T5" TextWrapping="Wrap" Text="您的社保卡已到达申领网点"/>
+                        <TextBlock HorizontalAlignment="Center" Foreground="#FF1294FF" Margin="20,0,20,0" Name="T52" TextWrapping="Wrap" Text="（广州银行肇庆支行）"/>
+                    </StackPanel>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Margin="20,0,20,0" Name="T6" TextWrapping="Wrap" Text=""/>
+                </Border>
+                <Border Width="225">
+                    <TextBlock HorizontalAlignment="Center" Margin="20,0,20,0" Name="T7" TextWrapping="Wrap" Text=""/>
+                </Border>
+            </StackPanel>
+            <TextBlock Name="error" FontSize="25" Text="制卡失败：XXXXXXXXXX" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20" Foreground="Red"/>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" TextBlock.FontSize="50" Margin="0,10,0,0">
+                    <TextBlock xml:space="preserve">姓　　名:  </TextBlock>
+                    <TextBlock Name="name">刘先化</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" TextBlock.FontSize="50" Margin="0,10,0,0">
+                    <TextBlock xml:space="preserve">身份证号:  </TextBlock>
+                    <TextBlock Name="persionid">4417844564894</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" TextBlock.FontSize="50" Margin="0,10,0,0">
+                    <TextBlock xml:space="preserve">制卡状态:  </TextBlock>
+                    <TextBlock Name="status" Foreground="#FF1294FF">未申请</TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:intf="http://server.wei.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://server.wei.com" targetNamespace="http://server.wei.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://server.wei.com">
+      <xsd:element name="getCard">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="aaz500" type="xsd:string" />
+            <xsd:element name="aac002" type="xsd:string" />
+            <xsd:element name="aac003" type="xsd:string" />
+            <xsd:element name="aab301" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCardResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getCardReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getBank">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="aac002" type="xsd:string" />
+            <xsd:element name="aac003" type="xsd:string" />
+            <xsd:element name="aab301" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getBankResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getBankReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getBankS">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="aac002" type="xsd:string" />
+            <xsd:element name="aac003" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getBankSResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getBankSReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAZ03">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="aac002" type="xsd:string" />
+            <xsd:element name="aac003" type="xsd:string" />
+            <xsd:element name="aab301" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAZ03Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getAZ03Return" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAZ03A">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="aac002s" type="xsd:string" />
+            <xsd:element name="aab301" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAZ03AResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getAZ03AReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAZ03BH">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="min" type="xsd:string" />
+            <xsd:element name="max" type="xsd:string" />
+            <xsd:element name="aab301" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAZ03BHResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getAZ03BHReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAC01">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="aac002" type="xsd:string" />
+            <xsd:element name="aac003" type="xsd:string" />
+            <xsd:element name="aab301" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getAC01Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getAC01Return" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readCard">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="id" type="xsd:string" />
+            <xsd:element name="aab301" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="readCardResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="readCardReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkTAC">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="dodebit" type="xsd:string" />
+            <xsd:element name="aab301a" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkTACResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="checkTACReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkTAC1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="dodebit" type="xsd:string" />
+            <xsd:element name="aab301a" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="checkTAC1Response">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="setCard">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="server" type="xsd:string" />
+            <xsd:element name="aaz500" type="xsd:string" />
+            <xsd:element name="aac002" type="xsd:string" />
+            <xsd:element name="aac003" type="xsd:string" />
+            <xsd:element name="aae008" type="xsd:string" />
+            <xsd:element name="aae010" type="xsd:string" />
+            <xsd:element name="aae010b" type="xsd:string" />
+            <xsd:element name="aab301" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setCardResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="setCardReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setLoss">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="aaz500" type="xsd:string" />
+            <xsd:element name="aac002" type="xsd:string" />
+            <xsd:element name="aac003" type="xsd:string" />
+            <xsd:element name="aab301" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setLossResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="setLossReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getLKSJ">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="batchno" type="xsd:string" />
+            <xsd:element name="sldbm" type="xsd:string" />
+            <xsd:element name="aab301" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getLKSJResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getLKSJReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getZDZZ">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="aaz500" type="xsd:string" />
+            <xsd:element name="aac002" type="xsd:string" />
+            <xsd:element name="zt" type="xsd:string" />
+            <xsd:element name="aab301" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getZDZZResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getZDZZReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setCOPY">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="xml" type="xsd:string" />
+            <xsd:element name="aab301" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setCOPYResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="setCOPYReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setDSYKH">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xml" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setDSYKHResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="setDSYKHReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="upPicture">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="id" type="xsd:string" />
+            <xsd:element name="time" type="xsd:string" />
+            <xsd:element name="time1" type="xsd:string" />
+            <xsd:element name="sign" type="xsd:string" />
+            <xsd:element name="img" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="upPictureResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="upPictureReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="allDsjk">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xml" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="allDsjkResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="allDsjkReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="onSendMessag">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="bsMsg" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="onSendMessagResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="onSendMessagReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCardInfo">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getCardInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getCardInfoReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSockInfo">
+        <xsd:complexType />
+      </xsd:element>
+      <xsd:element name="getSockInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getSockInfoReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="delete">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xml" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="deleteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="deleteReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="insert">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xml" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="insertResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="insertReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getData">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="aac002" type="xsd:string" />
+            <xsd:element name="aac003" type="xsd:string" />
+            <xsd:element name="aab301" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getDataResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getDataReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setStart">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="user" type="xsd:string" />
+            <xsd:element name="pass" type="xsd:string" />
+            <xsd:element name="aaz500" type="xsd:string" />
+            <xsd:element name="aac002" type="xsd:string" />
+            <xsd:element name="aac003" type="xsd:string" />
+            <xsd:element name="aab301" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setStartResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="setStartReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getBankSResponse">
+    <wsdl:part name="parameters" element="impl:getBankSResponse" />
+  </wsdl:message>
+  <wsdl:message name="setLossResponse">
+    <wsdl:part name="parameters" element="impl:setLossResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAC01Response">
+    <wsdl:part name="parameters" element="impl:getAC01Response" />
+  </wsdl:message>
+  <wsdl:message name="setCOPYResponse">
+    <wsdl:part name="parameters" element="impl:setCOPYResponse" />
+  </wsdl:message>
+  <wsdl:message name="readCardRequest">
+    <wsdl:part name="parameters" element="impl:readCard" />
+  </wsdl:message>
+  <wsdl:message name="getBankResponse">
+    <wsdl:part name="parameters" element="impl:getBankResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAZ03BHRequest">
+    <wsdl:part name="parameters" element="impl:getAZ03BH" />
+  </wsdl:message>
+  <wsdl:message name="getBankSRequest">
+    <wsdl:part name="parameters" element="impl:getBankS" />
+  </wsdl:message>
+  <wsdl:message name="getCardRequest">
+    <wsdl:part name="parameters" element="impl:getCard" />
+  </wsdl:message>
+  <wsdl:message name="onSendMessagRequest">
+    <wsdl:part name="parameters" element="impl:onSendMessag" />
+  </wsdl:message>
+  <wsdl:message name="getDataResponse">
+    <wsdl:part name="parameters" element="impl:getDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertRequest">
+    <wsdl:part name="parameters" element="impl:insert" />
+  </wsdl:message>
+  <wsdl:message name="allDsjkRequest">
+    <wsdl:part name="parameters" element="impl:allDsjk" />
+  </wsdl:message>
+  <wsdl:message name="setCOPYRequest">
+    <wsdl:part name="parameters" element="impl:setCOPY" />
+  </wsdl:message>
+  <wsdl:message name="upPictureResponse">
+    <wsdl:part name="parameters" element="impl:upPictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="allDsjkResponse">
+    <wsdl:part name="parameters" element="impl:allDsjkResponse" />
+  </wsdl:message>
+  <wsdl:message name="upPictureRequest">
+    <wsdl:part name="parameters" element="impl:upPicture" />
+  </wsdl:message>
+  <wsdl:message name="getAZ03Request">
+    <wsdl:part name="parameters" element="impl:getAZ03" />
+  </wsdl:message>
+  <wsdl:message name="setLossRequest">
+    <wsdl:part name="parameters" element="impl:setLoss" />
+  </wsdl:message>
+  <wsdl:message name="setCardRequest">
+    <wsdl:part name="parameters" element="impl:setCard" />
+  </wsdl:message>
+  <wsdl:message name="getCardResponse">
+    <wsdl:part name="parameters" element="impl:getCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAZ03AResponse">
+    <wsdl:part name="parameters" element="impl:getAZ03AResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBankRequest">
+    <wsdl:part name="parameters" element="impl:getBank" />
+  </wsdl:message>
+  <wsdl:message name="getSockInfoResponse">
+    <wsdl:part name="parameters" element="impl:getSockInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCardInfoRequest">
+    <wsdl:part name="parameters" element="impl:getCardInfo" />
+  </wsdl:message>
+  <wsdl:message name="getLKSJResponse">
+    <wsdl:part name="parameters" element="impl:getLKSJResponse" />
+  </wsdl:message>
+  <wsdl:message name="setStartResponse">
+    <wsdl:part name="parameters" element="impl:setStartResponse" />
+  </wsdl:message>
+  <wsdl:message name="readCardResponse">
+    <wsdl:part name="parameters" element="impl:readCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="onSendMessagResponse">
+    <wsdl:part name="parameters" element="impl:onSendMessagResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAZ03ARequest">
+    <wsdl:part name="parameters" element="impl:getAZ03A" />
+  </wsdl:message>
+  <wsdl:message name="checkTAC1Response">
+    <wsdl:part name="parameters" element="impl:checkTAC1Response" />
+  </wsdl:message>
+  <wsdl:message name="getDataRequest">
+    <wsdl:part name="parameters" element="impl:getData" />
+  </wsdl:message>
+  <wsdl:message name="setStartRequest">
+    <wsdl:part name="parameters" element="impl:setStart" />
+  </wsdl:message>
+  <wsdl:message name="deleteResponse">
+    <wsdl:part name="parameters" element="impl:deleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkTAC1Request">
+    <wsdl:part name="parameters" element="impl:checkTAC1" />
+  </wsdl:message>
+  <wsdl:message name="getCardInfoResponse">
+    <wsdl:part name="parameters" element="impl:getCardInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getZDZZResponse">
+    <wsdl:part name="parameters" element="impl:getZDZZResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertResponse">
+    <wsdl:part name="parameters" element="impl:insertResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLKSJRequest">
+    <wsdl:part name="parameters" element="impl:getLKSJ" />
+  </wsdl:message>
+  <wsdl:message name="setCardResponse">
+    <wsdl:part name="parameters" element="impl:setCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAC01Request">
+    <wsdl:part name="parameters" element="impl:getAC01" />
+  </wsdl:message>
+  <wsdl:message name="checkTACRequest">
+    <wsdl:part name="parameters" element="impl:checkTAC" />
+  </wsdl:message>
+  <wsdl:message name="checkTACResponse">
+    <wsdl:part name="parameters" element="impl:checkTACResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteRequest">
+    <wsdl:part name="parameters" element="impl:delete" />
+  </wsdl:message>
+  <wsdl:message name="setDSYKHResponse">
+    <wsdl:part name="parameters" element="impl:setDSYKHResponse" />
+  </wsdl:message>
+  <wsdl:message name="setDSYKHRequest">
+    <wsdl:part name="parameters" element="impl:setDSYKH" />
+  </wsdl:message>
+  <wsdl:message name="getAZ03BHResponse">
+    <wsdl:part name="parameters" element="impl:getAZ03BHResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAZ03Response">
+    <wsdl:part name="parameters" element="impl:getAZ03Response" />
+  </wsdl:message>
+  <wsdl:message name="getZDZZRequest">
+    <wsdl:part name="parameters" element="impl:getZDZZ" />
+  </wsdl:message>
+  <wsdl:message name="getSockInfoRequest">
+    <wsdl:part name="parameters" element="impl:getSockInfo" />
+  </wsdl:message>
+  <wsdl:portType name="CardService">
+    <wsdl:operation name="getCard">
+      <wsdl:input name="getCardRequest" message="impl:getCardRequest" />
+      <wsdl:output name="getCardResponse" message="impl:getCardResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getBank">
+      <wsdl:input name="getBankRequest" message="impl:getBankRequest" />
+      <wsdl:output name="getBankResponse" message="impl:getBankResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getBankS">
+      <wsdl:input name="getBankSRequest" message="impl:getBankSRequest" />
+      <wsdl:output name="getBankSResponse" message="impl:getBankSResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAZ03">
+      <wsdl:input name="getAZ03Request" message="impl:getAZ03Request" />
+      <wsdl:output name="getAZ03Response" message="impl:getAZ03Response" />
+    </wsdl:operation>
+    <wsdl:operation name="getAZ03A">
+      <wsdl:input name="getAZ03ARequest" message="impl:getAZ03ARequest" />
+      <wsdl:output name="getAZ03AResponse" message="impl:getAZ03AResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAZ03BH">
+      <wsdl:input name="getAZ03BHRequest" message="impl:getAZ03BHRequest" />
+      <wsdl:output name="getAZ03BHResponse" message="impl:getAZ03BHResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAC01">
+      <wsdl:input name="getAC01Request" message="impl:getAC01Request" />
+      <wsdl:output name="getAC01Response" message="impl:getAC01Response" />
+    </wsdl:operation>
+    <wsdl:operation name="readCard">
+      <wsdl:input name="readCardRequest" message="impl:readCardRequest" />
+      <wsdl:output name="readCardResponse" message="impl:readCardResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="checkTAC">
+      <wsdl:input name="checkTACRequest" message="impl:checkTACRequest" />
+      <wsdl:output name="checkTACResponse" message="impl:checkTACResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="checkTAC1">
+      <wsdl:input name="checkTAC1Request" message="impl:checkTAC1Request" />
+      <wsdl:output name="checkTAC1Response" message="impl:checkTAC1Response" />
+    </wsdl:operation>
+    <wsdl:operation name="setCard">
+      <wsdl:input name="setCardRequest" message="impl:setCardRequest" />
+      <wsdl:output name="setCardResponse" message="impl:setCardResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setLoss">
+      <wsdl:input name="setLossRequest" message="impl:setLossRequest" />
+      <wsdl:output name="setLossResponse" message="impl:setLossResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getLKSJ">
+      <wsdl:input name="getLKSJRequest" message="impl:getLKSJRequest" />
+      <wsdl:output name="getLKSJResponse" message="impl:getLKSJResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getZDZZ">
+      <wsdl:input name="getZDZZRequest" message="impl:getZDZZRequest" />
+      <wsdl:output name="getZDZZResponse" message="impl:getZDZZResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setCOPY">
+      <wsdl:input name="setCOPYRequest" message="impl:setCOPYRequest" />
+      <wsdl:output name="setCOPYResponse" message="impl:setCOPYResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setDSYKH">
+      <wsdl:input name="setDSYKHRequest" message="impl:setDSYKHRequest" />
+      <wsdl:output name="setDSYKHResponse" message="impl:setDSYKHResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="upPicture">
+      <wsdl:input name="upPictureRequest" message="impl:upPictureRequest" />
+      <wsdl:output name="upPictureResponse" message="impl:upPictureResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="allDsjk">
+      <wsdl:input name="allDsjkRequest" message="impl:allDsjkRequest" />
+      <wsdl:output name="allDsjkResponse" message="impl:allDsjkResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="onSendMessag">
+      <wsdl:input name="onSendMessagRequest" message="impl:onSendMessagRequest" />
+      <wsdl:output name="onSendMessagResponse" message="impl:onSendMessagResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCardInfo">
+      <wsdl:input name="getCardInfoRequest" message="impl:getCardInfoRequest" />
+      <wsdl:output name="getCardInfoResponse" message="impl:getCardInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getSockInfo">
+      <wsdl:input name="getSockInfoRequest" message="impl:getSockInfoRequest" />
+      <wsdl:output name="getSockInfoResponse" message="impl:getSockInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <wsdl:input name="deleteRequest" message="impl:deleteRequest" />
+      <wsdl:output name="deleteResponse" message="impl:deleteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="insert">
+      <wsdl:input name="insertRequest" message="impl:insertRequest" />
+      <wsdl:output name="insertResponse" message="impl:insertResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getData">
+      <wsdl:input name="getDataRequest" message="impl:getDataRequest" />
+      <wsdl:output name="getDataResponse" message="impl:getDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setStart">
+      <wsdl:input name="setStartRequest" message="impl:setStartRequest" />
+      <wsdl:output name="setStartResponse" message="impl:setStartResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CardServiceSoapBinding" type="impl:CardService">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCard">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getCardRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBank">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getBankRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getBankResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBankS">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getBankSRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getBankSResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAZ03">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAZ03Request">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAZ03Response">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAZ03A">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAZ03ARequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAZ03AResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAZ03BH">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAZ03BHRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAZ03BHResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAC01">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAC01Request">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getAC01Response">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readCard">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="readCardRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="readCardResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkTAC">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="checkTACRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="checkTACResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkTAC1">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="checkTAC1Request">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="checkTAC1Response">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setCard">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="setCardRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setCardResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setLoss">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="setLossRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setLossResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLKSJ">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getLKSJRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getLKSJResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getZDZZ">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getZDZZRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getZDZZResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setCOPY">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="setCOPYRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setCOPYResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setDSYKH">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="setDSYKHRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setDSYKHResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="upPicture">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="upPictureRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="upPictureResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="allDsjk">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="allDsjkRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="allDsjkResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="onSendMessag">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="onSendMessagRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="onSendMessagResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCardInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getCardInfoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCardInfoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSockInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getSockInfoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getSockInfoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delete">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="deleteRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="insertRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="insertResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getData">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getDataRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getDataResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setStart">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="setStartRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setStartResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CardServiceService">
+    <wsdl:port name="CardService" binding="impl:CardServiceSoapBinding">
+      <wsdlsoap:address location="http://19.15.232.26:7001/gdCardService/services/CardService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

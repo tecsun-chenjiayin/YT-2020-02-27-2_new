@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="YTH.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="YTH_WebReference_CardServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://193.100.40.89:7001/gdCardService/services/CardService</Value>
+    </Setting>
+    <Setting Name="YTH_WebReferenceSKG_JszkServiceImplService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://133.10.1.245:7002/JszkWebService/service/jszkService</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54D64EB6-A9E4-4F0A-ACD3-275EDABF607A}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>WpfControlLibrary</RootNamespace>
+    <AssemblyName>WpfControlLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Ink, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Microsoft.Ink.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>source\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="tools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\YTH\bin\x86\Debug\tools.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behaviors\Behavior_TextBox.cs" />
+    <Compile Include="Autograph.xaml.cs">
+      <DependentUpon>Autograph.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HandWrite.xaml.cs">
+      <DependentUpon>HandWrite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InputClear.xaml.cs">
+      <DependentUpon>InputClear.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InputPhoneNum.xaml.cs">
+      <DependentUpon>InputPhoneNum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Loading1.xaml.cs">
+      <DependentUpon>Loading1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Loading2.xaml.cs">
+      <DependentUpon>Loading2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Buttons\LRButton.xaml.cs">
+      <DependentUpon>LRButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Buttons\ScaleButton.xaml.cs">
+      <DependentUpon>ScaleButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MProcessBar.xaml.cs">
+      <DependentUpon>MProcessBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MTextBox.xaml.cs">
+      <DependentUpon>MTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectColor.xaml.cs">
+      <DependentUpon>SelectColor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectTimeCtls\Days.xaml.cs">
+      <DependentUpon>Days.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectTimeCtls\Month.xaml.cs">
+      <DependentUpon>Month.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectTimeCtls\SelectTimeBox.xaml.cs">
+      <DependentUpon>SelectTimeBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectTimeCtls\SelectTimeWin.xaml.cs">
+      <DependentUpon>SelectTimeWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectTimeCtls\Years.xaml.cs">
+      <DependentUpon>Years.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Table1\MyCheckBox.xaml.cs">
+      <DependentUpon>MyCheckBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Table1\SelectTable.xaml.cs">
+      <DependentUpon>SelectTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Table1\SelectTableItem.xaml.cs">
+      <DependentUpon>SelectTableItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Table2\MTable.xaml.cs">
+      <DependentUpon>MTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Table2\TableItem.xaml.cs">
+      <DependentUpon>TableItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Buttons\TXButton.xaml.cs">
+      <DependentUpon>TXButton.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Autograph.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HandWrite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InputClear.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="InputPhoneNum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KeyBoard\CharacterButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="KeyBoard\Keyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="KeyBoard\KeyButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="KeyBoard\One.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="KeyBoard\StyleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Loading1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Loading2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Buttons\LRButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MProcessBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ButtonDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Buttons\ScaleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelectColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelectTimeCtls\Days.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelectTimeCtls\Month.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelectTimeCtls\SelectTimeBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelectTimeCtls\SelectTimeWin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelectTimeCtls\Years.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Table1\MyCheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Table1\SelectTable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Table1\SelectTableItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Table2\MTable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Table2\TableItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Buttons\TXButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buttons\FButton.cs" />
+    <Compile Include="KeyBoard\CharacterButton.xaml.cs">
+      <DependentUpon>CharacterButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KeyBoard\Keyboard.xaml.cs">
+      <DependentUpon>Keyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KeyBoard\KeyButton.xaml.cs">
+      <DependentUpon>KeyButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KeyBoard\One.xaml.cs">
+      <DependentUpon>One.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KeyBoard\StyleButton.xaml.cs">
+      <DependentUpon>StyleButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KeyBoard\ZPoint.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Resource Include="Resources\使用方法.txt" />
+    <Content Include="source\System.Windows.Interactivity.dll" />
+    <Content Include="source\System.Windows.Interactivity.xml" />
+    <Content Include="WpfControlLibrary.data">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="YTH.BuKa.InputPersionMsg"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YTH.BuKa"
+             xmlns:local1="clr-namespace:YTH.Controls"
+             xmlns:kb="clr-namespace:WpfControlLibrary.KeyBoard;assembly=WpfControlLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid>
+        <Border Background="Black" Opacity="0.7"></Border>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Margin="0,25,0,0" HorizontalAlignment="Center">
+                <TextBlock Foreground="White" FontWeight="Bold" FontSize="50" VerticalAlignment="Center" Margin="0,0,20,0">身份证号：</TextBlock>
+                <Border Width="650" BorderThickness="1.5" BorderBrush="#E7E7E7" CornerRadius="5" >
+                    <StackPanel>
+                        <Border Name="border1" Background="White" Margin="10" CornerRadius="10">
+                            <Grid>
+                                <TextBox Name="bk1" 
+                                     MaxLength="8" Margin="15" Height="60" 
+                                     BorderThickness="0" VerticalContentAlignment="Center" 
+                                     HorizontalContentAlignment="Left" FontSize="45"
+                                     FontWeight="Bold"
+                                     Focusable="False"
+                                     Opacity="0.2">
+                                    请输入身份证号
+                                </TextBox>
+                                <TextBox Name="p1" Margin="10" Background="Transparent" 
+                                             BorderThickness="0"
+                                             FontSize="55" 
+                                             HorizontalContentAlignment="Center"
+                                             VerticalContentAlignment="Center"
+                                             TextChanged="p1_TextChanged"
+                                             MaxLength="18"
+                                             ></TextBox>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                </Border>
+                <!--<local1:TXButton x:Name="input" Click="input_Click" CornerRadius="10" BorderThickness="0" Width="120" Height="100" Margin="0,0,-120,0" MouseOverBKGround="#FF1586BB" MousePressBKGround="#FF0061A4" Background="#FF1586BB" Foreground="White" FontSize="40"  VerticalAlignment="Center">输入</local1:TXButton>-->
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,25,0,0" HorizontalAlignment="Center">
+                <TextBlock FontWeight="Bold" Foreground="White" FontSize="50" VerticalAlignment="Center" Margin="0,0,20,0">姓　　名：</TextBlock>
+                <Border Width="650" BorderThickness="1.5" BorderBrush="#E7E7E7" CornerRadius="5" >
+                    <StackPanel>
+                        <Border Name="border2" Background="White" Margin="10" CornerRadius="10">
+                            <Grid>
+                                <TextBox Name="bk2" 
+                                     MaxLength="8" Margin="15" Height="60" 
+                                     BorderThickness="0" VerticalContentAlignment="Center" 
+                                     HorizontalContentAlignment="Left" FontSize="45"
+                                     FontWeight="Bold"
+                                     Focusable="False"
+                                     Opacity="0.2">
+                                    请输入姓名
+                                </TextBox>
+                                <TextBox Name="p2" Margin="10" Background="Transparent" 
+                                             BorderThickness="0"
+                                             FontSize="55" 
+                                             HorizontalContentAlignment="Center"
+                                             VerticalContentAlignment="Center"
+                                             TextChanged="p2_TextChanged"
+                                             MaxLength="16"
+                                             ></TextBox>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                </Border>
+                <!--<local1:TXButton x:Name="input2" Click="input2_Click" CornerRadius="10" BorderThickness="0" Width="120" Height="100" Margin="0,0,-120,0" MouseOverBKGround="#FF1586BB" MousePressBKGround="#FF0061A4" Background="#FF1586BB" Foreground="White" FontSize="40"  VerticalAlignment="Center">输入</local1:TXButton>-->
+            </StackPanel>
+        </StackPanel>
+        <kb:Keyboard x:Name="keyboard" HorizontalAlignment="Center" Margin="200,324,934,488" Width="786">
+            <kb:Keyboard.RenderTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </kb:Keyboard.RenderTransform>
+        </kb:Keyboard>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="800,0,0,0">
+            <local1:TXButton x:Name="ok" Click="ok_Click" CornerRadius="10" BorderThickness="0" Width="300" Height="100" MouseOverBKGround="#FF1586BB" MousePressBKGround="#FF0061A4" Background="#FF1586BB" Foreground="White" FontSize="40" Margin="20">确认</local1:TXButton>
+            <local1:TXButton x:Name="read" Click="read_Click" CornerRadius="10" BorderThickness="0" Width="200" Height="100" MouseOverBKGround="#FFFF8B00" MousePressBKGround="#FFD87600" Background="#FFFF8B00" Foreground="White" FontSize="40" Margin="300,0,0,0">读身份证</local1:TXButton>
+            <local1:TXButton x:Name="close" Click="close_Click" CornerRadius="10" BorderThickness="0" Width="120" Height="100" MouseOverBKGround="#FFEE3A3A" MousePressBKGround="#FFA22828" Background="#FFEE3A3A" Foreground="White" FontSize="40"  Margin="20">关闭</local1:TXButton>
+        </StackPanel>
+    </Grid>
+</UserControl>
